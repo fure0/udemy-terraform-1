@@ -9,6 +9,13 @@ terraform {
       version = ">= 4.0.0"
     }
   }
+
+  backend "s3" {
+    bucket  = "tastylog-tfstate-bucket-kimty"
+    key     = "tastylog-dev.tfstate"
+    region  = "ap-northeast-1"
+    profile = "terraform"
+  }
 }
 # -------------------------------------------------
 # provider
