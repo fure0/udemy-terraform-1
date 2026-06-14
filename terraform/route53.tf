@@ -2,7 +2,7 @@
 # Route 53
 # -------------------------------------------------
 
-resource "aws_route53_zone" "main" {
+resource "aws_route53_zone" "route53_zone" {
   name          = var.domain
   force_destroy = false
 
@@ -14,7 +14,7 @@ resource "aws_route53_zone" "main" {
 }
 
 resource "aws_route53_record" "route53_record" {
-  zone_id = aws_route53_zone.main.zone_id
+  zone_id = aws_route53_zone.route53_zone.id
   name    = "dev-elb.${var.domain}"
   type    = "A"
   alias {
