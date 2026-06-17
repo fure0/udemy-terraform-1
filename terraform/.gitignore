@@ -42,3 +42,6 @@ terraform.rc
 # SSH key pairs (private/public keys)
 *.pem
 *.pub
+
+# Application source files and archives (not version controlled)
+src/
