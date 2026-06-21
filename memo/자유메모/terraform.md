@@ -22,3 +22,7 @@ terraform apply -auto-approve
 
 - `plan`에서 나온 변경을 **실제로 적용**한다.
 - `-auto-approve`는 마지막에 `yes`를 묻지 않고 바로 진행한다. 실수로 지울 수 있으니 로컬 연습·CI 등에서만 쓰는 편이 안전하다.
+
+```bash
+terraform destroy -auto-approve
+```
